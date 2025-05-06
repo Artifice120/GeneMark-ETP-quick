@@ -1,3 +1,29 @@
+
+Install dependencies with ```conda``` or  ```mamba```
+
+```
+micromamba create -n gmet-env -c bioconda -c conda-forge bedtools diamond fastq-dump gffread hisat2 sra-tools samtools stringtie perl-yaml-libyaml
+micromamba activate gmet-env
+cd $( which bedtools | awk -F '/bin/bedtools' '{ print $1 }' )
+micromamba deactivate
+```
+
+Then clone the git-repo here:
+
+```
+git clone  https://github.com/gatech-genemark/GeneMark-ETP
+mv GeneMark-ETP/tools ./
+cp -r GeneMark-ETP/bin/* bin/
+sed -i 's|./||g' bin/check_ETP_tools.pl
+```
+Then activate the environemnt and test the installation
+
+```
+micromamba activate gmet-env
+check_ETP_tools.pl
+```
+
+
 # GeneMark-ETP
 
 Gene finding in eukaryotic genomes by GeneMark-ETP  
