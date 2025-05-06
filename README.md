@@ -14,7 +14,7 @@ Then clone the git-repo here:
 git clone  https://github.com/gatech-genemark/GeneMark-ETP
 mv GeneMark-ETP/tools ./
 cp -r GeneMark-ETP/bin/* bin/
-sed -i 's|./||g' bin/check_ETP_tools.pl
+sed -i 's|CheckForVerison( "./|CheckForVerison( "|g' bin/check_ETP_tools.pl
 ```
 Then activate the environemnt and test the installation
 
