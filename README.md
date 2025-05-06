@@ -2,7 +2,7 @@
 Install dependencies with ```conda``` or  ```mamba```
 
 ```
-micromamba create -n gmet-env -c bioconda -c conda-forge bedtools diamond fastq-dump gffread hisat2 sra-tools samtools stringtie perl-yaml-libyaml
+micromamba create -n gmet-env -c bioconda -c conda-forge bedtools diamond gffread hisat2 sra-tools samtools stringtie perl-yaml-libyaml
 micromamba activate gmet-env
 cd $( which bedtools | awk -F '/bin/bedtools' '{ print $1 }' )
 micromamba deactivate
